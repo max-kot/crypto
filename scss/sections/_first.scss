@@ -1,0 +1,44 @@
+.first {
+	padding: 80px 0 381px;
+	background: url("../../img/first/bg.png") top/cover no-repeat;
+	&__body {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		@media (max-width: 992px) {
+			height: auto;
+		}
+	}
+
+	&__title {
+		max-width: 780px;
+		font-weight: 900;
+		font-size: 85px;
+		line-height: 130%;
+		text-align: center;
+		color: #fff;
+		@media (max-width: 992px) {
+			font-size: 65px;
+		}
+		@media (max-width: 768px) {
+			font-size: 45px;
+		}
+		& + * {
+			margin-top: 16px;
+		}
+	}
+
+	&__text {
+		max-width: 530px;
+		text-align: center;
+		color: #898ca9;
+		& + * {
+			margin-top: 32px;
+		}
+	}
+
+	&__btn {
+	}
+}

@@ -1,0 +1,76 @@
+/*--- Base Styles ---*/
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: "Inter", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	color: #898ca9;
+	line-height: 150%;
+	background: #0b0b0f;
+}
+
+/*--- Utility ---*/
+.none {
+	display: none !important;
+}
+
+.visually-hidden {
+	// делает элемент скрытым, но он по-прежнему на странице
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	width: 0px;
+	height: 0px;
+	display: block;
+	margin-left: -10000px;
+	background: transparent;
+	font-size: 0;
+}
+
+/*--- Grid ---*/
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.container {
+	max-width: 1210px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+/*--- Elements ---*/
+.btn,
+a.btn {
+	border: 1px solid #fff;
+	border-radius: 10px;
+	color: #fff;
+	font-family: "Inter";
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 100%;
+	text-align: center;
+	padding: 20px;
+	min-width: 156px;
+	transition: all 0.3s;
+	&:hover {
+		transform: translateY(-5px);
+	}
+}
+.btn--small,
+a.btn--small {
+	padding: 12px;
+	min-width: 96px;
+}
+.btn--active,
+a.btn--active {
+	background: linear-gradient(225deg, #18c8ff 14.89%, #933ffe 85.85%);
+	border-color: transparent;
+}
+.no-scroll {
+	overflow: hidden;
+}
