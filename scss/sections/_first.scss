@@ -1,6 +1,8 @@
 .first {
-	padding: 80px 0 381px;
-	background: url("../../img/first/bg.png") top/cover no-repeat;
+	padding: 80px 0 90px;
+	@media (max-width: 992px) {
+		padding-bottom: 50px;
+	}
 	&__body {
 		height: 100vh;
 		display: flex;

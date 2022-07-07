@@ -507,7 +507,7 @@ body {
   font-weight: 400;
   color: #898ca9;
   line-height: 150%;
-  background: #0b0b0f;
+  background: #0b0b0f url("../../img/bg.png") top/cover no-repeat;
 }
 
 /*--- Utility ---*/
@@ -547,7 +547,7 @@ a.btn {
   border: 1px solid #fff;
   border-radius: 10px;
   color: #fff;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 100%;
@@ -558,7 +558,7 @@ a.btn {
 }
 .btn:hover,
 a.btn:hover {
-  transform: translateY(-5px);
+  transform: scale(1.1);
 }
 
 .btn--small,
@@ -577,12 +577,49 @@ a.btn--active {
   overflow: hidden;
 }
 
+.link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: #b982ff;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link > * + * {
+  margin-left: 12px;
+}
+.link:hover .link__icon path {
+  stroke: #898ca9;
+}
+
+.title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 130%;
+  color: #ffffff;
+}
+@media (max-width: 992px) {
+  .title {
+    font-size: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 35px;
+  }
+}
+
 /*--- Section Styles ---*/
 .header {
   padding: 20px 0;
   position: fixed;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
@@ -592,11 +629,10 @@ a.btn--active {
   justify-content: space-between;
 }
 .header__logo {
-  opacity: 1;
-  transition: opacity 0.3s;
+  transition: all 0.3s;
 }
 .header__logo:hover {
-  opacity: 0.6;
+  transform: scale(1.1);
 }
 .header__nav {
   display: flex;
@@ -641,8 +677,7 @@ a.btn--active {
   font-size: 14px;
   line-height: 100%;
   color: #fff;
-  opacity: 1;
-  transition: opacity 0.3s;
+  transition: color 0.3s;
 }
 @media (max-width: 992px) {
   .menu__item {
@@ -659,7 +694,7 @@ a.btn--active {
   }
 }
 .menu__item:hover {
-  opacity: 0.6;
+  color: #b982ff;
 }
 .login {
   display: flex;
@@ -736,8 +771,12 @@ a.btn--active {
 }
 
 .first {
-  padding: 80px 0 381px;
-  background: url("../../img/first/bg.png") top/cover no-repeat;
+  padding: 80px 0 90px;
+}
+@media (max-width: 992px) {
+  .first {
+    padding-bottom: 50px;
+  }
 }
 .first__body {
   height: 100vh;
@@ -778,5 +817,108 @@ a.btn--active {
   color: #898ca9;
 }
 .first__text + * {
+  margin-top: 32px;
+}
+.card {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+@media (max-width: 992px) {
+  .card {
+    padding: 50px 0;
+  }
+}
+.card__list {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .card__list {
+    flex-wrap: wrap;
+  }
+}
+.card__item {
+  flex: 0 1 33.333%;
+  background: rgba(26, 27, 35, 0.7);
+  border-radius: 25px;
+  padding: 32px 24px 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 992px) {
+  .card__item {
+    flex: 1 1 48%;
+  }
+}
+@media (max-width: 768px) {
+  .card__item {
+    flex: 1 1 100%;
+  }
+}
+
+.card-item {
+  text-align: center;
+}
+.card-item__icon {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 80px;
+}
+.card-item__icon + * {
+  margin-top: 16.21px;
+}
+.card-item__title {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 130%;
+  color: #ffffff;
+}
+.card-item__title + * {
+  margin-top: 16px;
+}
+@media (max-width: 768px) {
+  .card-item__title {
+    font-size: 25px;
+  }
+}
+.card-item__text {
+  max-width: 280px;
+  flex: 1 1 auto;
+}
+.card-item__text + * {
+  margin-top: 32px;
+}
+@media (max-width: 768px) {
+  .card-item__text {
+    min-width: 100%;
+  }
+}
+.description {
+  padding: 140px 0;
+}
+@media (max-width: 992px) {
+  .description {
+    padding: 50px 0;
+  }
+}
+.description__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.description__title {
+  max-width: 780px;
+}
+.description__title + * {
+  margin-top: 16px;
+}
+.description__text {
+  max-width: 580px;
+}
+.description__text + * {
   margin-top: 32px;
 }
