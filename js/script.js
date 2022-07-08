@@ -8,3 +8,16 @@ menuBtn.addEventListener('click', function () {
 	menuList.classList.toggle('active');
 	document.querySelector('body').classList.toggle('no-scroll');
 })
+
+/*--- Spoilers --- */
+const allSpoilerBtn = document.querySelectorAll('.footer-nav__title');
+const allSpoilerBox = document.querySelectorAll('.footer-nav__menu');
+
+allSpoilerBtn.forEach(function (spoilerBtn) {
+	spoilerBtn.addEventListener('click', function () {
+		this.classList.toggle('active-tab')
+		const spoilerId = this.dataset.tab;
+		const spoilerBoxId = document.querySelector('#' + spoilerId);
+		spoilerBoxId.classList.toggle('active-box');
+	})
+})
