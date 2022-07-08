@@ -9,7 +9,7 @@ body {
 	font-weight: 400;
 	color: #898ca9;
 	line-height: 150%;
-	background: #0b0b0f url("../../img/bg.png") top/cover no-repeat;
+	background: #0b0b0f url("../img/bg.png") top/cover no-repeat;
 }
 
 /*--- Utility ---*/
@@ -75,7 +75,8 @@ a.btn--active {
 	overflow: hidden;
 }
 
-.link {
+.link,
+a.link {
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 100%;
@@ -83,13 +84,23 @@ a.btn--active {
 	color: #b982ff;
 	transition: all 0.3s;
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	& > * + * {
 		margin-left: 12px;
 	}
 	&:hover &__icon path {
 		stroke: #898ca9;
+	}
+	&:hover {
+		color: #898ca9;
+	}
+}
+
+.link--white,
+a.link--white {
+	color: #fff;
+	& path {
+		stroke: #fff;
 	}
 }
 

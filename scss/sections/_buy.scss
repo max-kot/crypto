@@ -1,0 +1,136 @@
+.buy {
+	padding: 120px 0;
+	@media (max-width: 992px) {
+		padding: 50px 0;
+	}
+	&__body {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__header {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		& + * {
+			margin-top: 50px;
+		}
+	}
+
+	&__title {
+		max-width: 780px;
+		& + * {
+			margin-top: 16px;
+		}
+	}
+
+	&__text {
+		max-width: 580px;
+		& + * {
+			margin-top: 32px;
+		}
+	}
+	&__link {
+	}
+
+	&__table {
+		width: 100%;
+	}
+}
+.buy-table {
+	&__body {
+	}
+	&__table {
+	}
+}
+.table {
+	background: #1a1b23;
+	border-radius: 25px;
+	padding: 20px 32px;
+	width: 100%;
+	&__row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 26px 0;
+		text-align: left;
+		&:not(:last-child) {
+			border-bottom: 1px solid #2b2c3b;
+		}
+		@media (max-width: 1225px) {
+			text-align: center;
+		}
+	}
+
+	&__cell {
+		display: inline-block;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 150%;
+		color: #ffffff;
+		text-align: left;
+		& + * {
+			margin-left: 32px;
+			@media (max-width: 900px) {
+				margin: 0;
+				margin-top: 15px;
+			}
+		}
+		@media (max-width: 900px) {
+			flex: 0 1 50%;
+		}
+		@media (max-width: 580px) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__cell--name {
+		width: 207px;
+		@media (max-width: 1225px) {
+			width: unset;
+		}
+	}
+
+	&__cell--currency {
+		color: #b982ff;
+		width: 207px;
+		@media (max-width: 1225px) {
+			width: unset;
+		}
+	}
+
+	&__cell--value {
+		width: 116px;
+		text-align: right;
+		@media (max-width: 1225px) {
+			text-align: left;
+			width: unset;
+		}
+	}
+
+	&__cell--percent {
+		color: #0dbb7c;
+	}
+	&__cell--percent-red {
+		color: #ff8282;
+	}
+
+	&__cell--graphic {
+		width: 208px;
+		@media (max-width: 1225px) {
+			width: unset;
+		}
+	}
+
+	&__cell--link {
+	}
+}
+.link--white {
+}
